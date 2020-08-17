@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f0e3585a-a45b-4459-8e9c-dba663e38ba6" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\apache-maven-3.5.4\repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../apache-maven-3.5.4" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.5.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1faOf39ywqvryEJH6Sa0PcLoVHz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.inyta.assciation.common" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="AssciationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="assciation" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.inyta.assciation.AssciationApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f0e3585a-a45b-4459-8e9c-dba663e38ba6" name="Default Changelist" comment="" />
+      <created>1596452836721</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596452836721</updated>
+      <workItem from="1596452838566" duration="2698000" />
+      <workItem from="1596551985283" duration="2687000" />
+      <workItem from="1596674764906" duration="287000" />
+      <workItem from="1596766957051" duration="10550000" />
+      <workItem from="1597020291914" duration="13053000" />
+      <workItem from="1597061145469" duration="1359000" />
+      <workItem from="1597068238689" duration="2530000" />
+      <workItem from="1597106873879" duration="2442000" />
+      <workItem from="1597151254788" duration="4109000" />
+      <workItem from="1597193524496" duration="5239000" />
+      <workItem from="1597202454336" duration="292000" />
+      <workItem from="1597202811242" duration="2363000" />
+      <workItem from="1597218088084" duration="2285000" />
+      <workItem from="1597220641328" duration="462000" />
+      <workItem from="1597221933899" duration="1533000" />
+      <workItem from="1597223535068" duration="2493000" />
+      <workItem from="1597234566204" duration="60000" />
+      <workItem from="1597234831031" duration="630000" />
+      <workItem from="1597285592349" duration="8000" />
+      <workItem from="1597286636378" duration="19708000" />
+      <workItem from="1597325415142" duration="52000" />
+      <workItem from="1597366153264" duration="28026000" />
+      <workItem from="1597400263839" duration="299000" />
+      <workItem from="1597400771121" duration="97000" />
+      <workItem from="1597625529379" duration="2467000" />
+    </task>
+    <task id="LOCAL-00001" summary="xx">
+      <created>1596784644539</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1596784644539</updated>
+    </task>
+    <task id="LOCAL-00002" summary="xx">
+      <created>1597296859629</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1597296859629</updated>
+    </task>
+    <task id="LOCAL-00003" summary="shiro、登录、简单的注册">
+      <created>1597307779965</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1597307779965</updated>
+    </task>
+    <task id="LOCAL-00004" summary="shiro+jwt">
+      <created>1597398711938</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1597398711938</updated>
+    </task>
+    <task id="LOCAL-00005" summary="shiro+jwt">
+      <created>1597399913571</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1597399913571</updated>
+    </task>
+    <task id="LOCAL-00006" summary="shiro+jwt">
+      <created>1597627529569</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1597627529569</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="xx" />
+    <MESSAGE value="shiro、登录、简单的注册" />
+    <MESSAGE value="shiro+jwt" />
+    <option name="LAST_COMMIT_MESSAGE" value="shiro+jwt" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="395" y="90" key="#Inspections" timestamp="1596792533531">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="395" y="90" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1596792533531" />
+    <state x="579" y="132" key="#Menus_and_Toolbars" timestamp="1596784728522">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="579" y="132" key="#Menus_and_Toolbars/0.0.1536.824@0.0.1536.824" timestamp="1596784728522" />
+    <state x="499" y="167" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1597021705027">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="167" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1597021705027" />
+    <state x="574" y="117" key="#com.intellij.ide.util.MemberChooser" timestamp="1597394561290">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="117" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1597394561290" />
+    <state x="462" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597203184982">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="462" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1597203184982" />
+    <state x="499" y="158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597370450869">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1597370450869" />
+    <state x="367" y="0" key="CommitChangelistDialog2" timestamp="1597627527553">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="367" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1597627527553" />
+    <state width="503" height="466" key="DebuggerActiveHint" timestamp="1597392978782">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="503" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1597392978782" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1596785165701">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1596785165701" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1597222623441">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597222623441" />
+    <state width="1493" height="274" key="GridCell.Tab.0.bottom" timestamp="1597628302627">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="274" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1597628302627" />
+    <state width="1493" height="274" key="GridCell.Tab.0.center" timestamp="1597628302627">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="274" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1597628302627" />
+    <state width="1493" height="274" key="GridCell.Tab.0.left" timestamp="1597628302627">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="274" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1597628302627" />
+    <state width="1493" height="274" key="GridCell.Tab.0.right" timestamp="1597628302627">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="274" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1597628302627" />
+    <state width="1493" height="274" key="GridCell.Tab.1.bottom" timestamp="1597628302627">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="274" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1597628302627" />
+    <state width="1493" height="274" key="GridCell.Tab.1.center" timestamp="1597628302627">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="274" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1597628302627" />
+    <state width="1493" height="274" key="GridCell.Tab.1.left" timestamp="1597628302627">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="274" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1597628302627" />
+    <state width="1493" height="274" key="GridCell.Tab.1.right" timestamp="1597628302627">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="274" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1597628302627" />
+    <state width="1493" height="218" key="GridCell.Tab.2.bottom" timestamp="1597400049657">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="218" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1597400049657" />
+    <state width="1493" height="218" key="GridCell.Tab.2.center" timestamp="1597400049656">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="218" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1597400049656" />
+    <state width="1493" height="218" key="GridCell.Tab.2.left" timestamp="1597400049656">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="218" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1597400049656" />
+    <state width="1493" height="218" key="GridCell.Tab.2.right" timestamp="1597400049656">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="218" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1597400049656" />
+    <state x="550" y="113" key="RollbackChangesDialog" timestamp="1597384828947">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="550" y="113" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1597384828947" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1597627806748">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1597627806748" />
+    <state x="563" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597627491698">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="563" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1597627491698" />
+    <state x="468" y="115" width="600" height="594" key="find.popup" timestamp="1597155839193">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="468" y="115" width="600" height="594" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1597155839193" />
+    <state x="178" y="72" key="new project wizard" timestamp="1596552251232">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="178" y="72" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1596552251232" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../apache-maven-3.5.4/repository/org/apache/shiro/shiro-core/1.4.1/shiro-core-1.4.1-sources.jar!/org/apache/shiro/authc/SimpleAuthenticationInfo.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../apache-maven-3.5.4/repository/org/apache/shiro/shiro-core/1.4.1/shiro-core-1.4.1-sources.jar!/org/apache/shiro/authc/credential/PasswordMatcher.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../apache-maven-3.5.4/repository/org/apache/shiro/shiro-core/1.4.1/shiro-core-1.4.1-sources.jar!/org/apache/shiro/authc/credential/SimpleCredentialsMatcher.java</url>
+          <line>126</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo typeName="org.apache.shiro.web.servlet.ShiroHttpServletRequest" fieldName="request" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+</project>

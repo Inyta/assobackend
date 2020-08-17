@@ -1,0 +1,24 @@
+server:
+  port: 8081
+
+
+spring:
+  application:
+    name: association
+  datasource:
+    url: jdbc:mysql://106.14.170.74:3306/association?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: 1hblsqt!
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
+
+logging:
+  level:
+    com:
+      inyta:
+        assciation:
+          mapper: debug
+
+
