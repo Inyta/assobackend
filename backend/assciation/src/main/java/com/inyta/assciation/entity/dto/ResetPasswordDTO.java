@@ -2,18 +2,18 @@ package com.inyta.assciation.entity.dto;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * @Author: zhangwei
- * @Date: 2020/8/10 22:08
+ * @Date: 2020/8/18 14:05
  */
 @Getter
 @Setter
-public class UserDTO {
+@ToString
+public class ResetPasswordDTO {
 
-    private Long userId;
-
-    private String userName;
+    private String exPassword;
 
     private String password;
 }

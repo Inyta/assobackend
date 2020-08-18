@@ -2,7 +2,8 @@ package com.inyta.assciation.controller;
 
 import cn.hutool.core.bean.BeanUtil;
 import com.inyta.assciation.common.Jwt.JwtUtils;
-import com.inyta.assciation.entity.dto.UserDTO;
+import com.inyta.assciation.entity.dto.RegisterDTO;
+import com.inyta.assciation.entity.dto.UserLoginDTO;
 import com.inyta.assciation.entity.model.Result;
 import com.inyta.assciation.entity.po.User;
 import com.inyta.assciation.service.UserService;
@@ -17,7 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import javax.servlet.http.HttpServletResponse;
+
 import java.util.Date;
 
 /**
@@ -34,11 +35,11 @@ public class LoginController {
 
 
     @PostMapping("/login")
-    public Result<Void> Login(@RequestBody UserDTO userDTO) {
-        UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(userDTO.getUserId().toString(), userDTO.getPassword());
+    public Result<Void> Login(@RequestBody UserLoginDTO userLoginDTO) {
+        UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(userLoginDTO.getUserId().toString(), userLoginDTO.getPassword());
         try {
             SecurityUtils.getSubject().login(usernamePasswordToken);
-            String jwt = jwtUtils.generateToken(userDTO.getUserId());
+            String jwt = jwtUtils.generateToken(userLoginDTO.getUserId());
             return Result.success(jwt);
         } catch (UnknownAccountException e) {
             return Result.failed("用户名或密码错误，请重试");
@@ -48,13 +49,15 @@ public class LoginController {
     }
 
     @PostMapping("/register")
-    public Result<Void> register(@RequestBody UserDTO userDTO) {
-        ByteSource salt = ByteSource.Util.bytes(userDTO.getUserId().toString());
-        SimpleHash hash = new SimpleHash(Md5Hash.ALGORITHM_NAME, userDTO.getPassword(), salt, 5);
-        userDTO.setPassword(hash.toString());
+    public Result<Void> register(@RequestBody RegisterDTO registerDTO) {
+        ByteSource salt = ByteSource.Util.bytes(registerDTO.getUserId().toString());
+        SimpleHash hash = new SimpleHash(Md5Hash.ALGORITHM_NAME, registerDTO.getPassword(), salt, 5);
+        registerDTO.setPassword(hash.toString());
         User user = new User();
         user.setCreateTime(new Date());
-        BeanUtil.copyProperties(userDTO, user);
+        user.setStatus(0);
+        user.setRole(2);
+        BeanUtil.copyProperties(registerDTO, user);
         userService.save(user);
         return Result.success();
     }

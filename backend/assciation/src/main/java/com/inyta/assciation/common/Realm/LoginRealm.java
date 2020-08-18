@@ -47,7 +47,6 @@ public class LoginRealm extends AuthorizingRealm {
         }
         //用户ID作为盐
         ByteSource credentialsSalt = ByteSource.Util.bytes(authenticationToken.getPrincipal());
-        System.out.println(getName());
         //返回数据库取出来的加密密码与经过加密后的登录密码进行对比
         return new SimpleAuthenticationInfo(authenticationToken.getPrincipal(), user.getPassword(), credentialsSalt, getName());
     }

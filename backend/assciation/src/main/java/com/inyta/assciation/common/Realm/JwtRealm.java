@@ -21,11 +21,6 @@ public class JwtRealm extends AuthorizingRealm {
     @Autowired
     private JwtUtils jwtUtils;
 
-//    @Override
-//    public String getName() {
-//        return "Jwt_Realm";
-//    }
-
     @Override
     public boolean supports(AuthenticationToken token) {
         return token instanceof JwtToken;

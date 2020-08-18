@@ -20,6 +20,10 @@ public class User {
 
     private String password;
 
+    private String avatarUrl;
+
+    private String phone;
+
     private Integer gender;
 
     private Date createTime;
