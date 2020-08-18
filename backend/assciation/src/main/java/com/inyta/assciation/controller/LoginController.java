@@ -1,8 +1,7 @@
 package com.inyta.assciation.controller;
 
 import cn.hutool.core.bean.BeanUtil;
-import com.baomidou.mybatisplus.extension.api.R;
-import com.inyta.assciation.common.JwtUtils;
+import com.inyta.assciation.common.Jwt.JwtUtils;
 import com.inyta.assciation.entity.dto.UserDTO;
 import com.inyta.assciation.entity.model.Result;
 import com.inyta.assciation.entity.po.User;
@@ -15,12 +14,9 @@ import org.apache.shiro.crypto.hash.Md5Hash;
 import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
 
@@ -38,7 +34,7 @@ public class LoginController {
 
 
     @PostMapping("/login")
-    public Result<Void> Login(@RequestBody UserDTO userDTO, HttpServletResponse response) {
+    public Result<Void> Login(@RequestBody UserDTO userDTO) {
         UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(userDTO.getUserId().toString(), userDTO.getPassword());
         try {
             SecurityUtils.getSubject().login(usernamePasswordToken);
@@ -61,11 +57,5 @@ public class LoginController {
         BeanUtil.copyProperties(userDTO, user);
         userService.save(user);
         return Result.success();
-    }
-    @GetMapping("/test1")
-    public Result<Void> test1(HttpServletRequest request){
-        String str = jwtUtils.getClaimByToken(request.getHeader("Authorization")).getSubject();
-        System.out.println(str);
-        return Result.success(str);
     }
 }

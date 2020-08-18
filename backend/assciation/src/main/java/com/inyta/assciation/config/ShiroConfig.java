@@ -1,23 +1,24 @@
 package com.inyta.assciation.config;
 
-import com.inyta.assciation.common.JwtFilter;
-import com.inyta.assciation.common.MyRealm;
+import com.inyta.assciation.common.Realm.ChooseRealm;
+import com.inyta.assciation.common.Jwt.JwtFilter;
+import com.inyta.assciation.common.Realm.JwtRealm;
+import com.inyta.assciation.common.Realm.LoginRealm;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
+import org.apache.shiro.authc.pam.AtLeastOneSuccessfulStrategy;
+import org.apache.shiro.authc.pam.ModularRealmAuthenticator;
 import org.apache.shiro.crypto.hash.Md5Hash;
 import org.apache.shiro.mgt.SecurityManager;
-import org.apache.shiro.mgt.SessionsSecurityManager;
+import org.apache.shiro.realm.Realm;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import javax.servlet.Filter;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @Author: zhangwei
@@ -26,17 +27,35 @@ import java.util.Map;
 @Configuration
 public class ShiroConfig {
 
-    @Autowired
-    private JwtFilter jwtFilter;
-
     /**
-     * 配置自定义的Realm（核心）
+     * 配置登录Realm（核心）
      */
     @Bean
-    public MyRealm myRealm() {
-        MyRealm realm = new MyRealm();
-        realm.setCredentialsMatcher(hashedCredentialsMatcher());
-        return realm;
+    public LoginRealm loginRealm() {
+        LoginRealm loginRealm = new LoginRealm();
+        loginRealm.setCredentialsMatcher(hashedCredentialsMatcher());
+        return loginRealm;
+    }
+
+    /**
+     * 配置JWTRealm（核心）
+     */
+    @Bean
+    public JwtRealm jwtRealm() {
+        JwtRealm jwtRealm = new JwtRealm();
+        return jwtRealm;
+    }
+
+    /**
+     * 针对多Realm，使用自定义身份验证器
+     *
+     * @return
+     */
+    @Bean
+    public ModularRealmAuthenticator modularRealmAuthenticator() {
+        ChooseRealm authenticator = new ChooseRealm();
+        authenticator.setAuthenticationStrategy(new AtLeastOneSuccessfulStrategy());
+        return authenticator;
     }
 
 
@@ -45,19 +64,27 @@ public class ShiroConfig {
         ShiroFilterFactoryBean shiroFilterFactory = new ShiroFilterFactoryBean();
         shiroFilterFactory.setSecurityManager(securityManager);
         Map<String, Filter> filter = new HashMap<>();
-        filter.put("jwt", jwtFilter);
+        filter.put("jwt", new JwtFilter());
         shiroFilterFactory.setFilters(filter);
         Map<String, String> filterMap = new LinkedHashMap<>();
         filterMap.put("/login", "anon");
+        filterMap.put("/logout", "anon");
         filterMap.put("/**", "jwt");
         shiroFilterFactory.setFilterChainDefinitionMap(filterMap);
         return shiroFilterFactory;
     }
 
     @Bean
-    public SessionsSecurityManager securityManager(MyRealm realm) {
-        DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager(realm);
+    public DefaultWebSecurityManager securityManager() {
+        DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
+        securityManager.setAuthenticator(modularRealmAuthenticator());
+        // 设置Realms
+        List<Realm> realms = new ArrayList<>(2);
+        realms.add(jwtRealm());
+        realms.add(loginRealm());
+        securityManager.setRealms(realms);
         return securityManager;
+
     }
 
     /**

@@ -1,4 +1,4 @@
-package com.inyta.assciation.common;
+package com.inyta.assciation.common.Jwt;
 
 import org.apache.shiro.authc.AuthenticationToken;
 

@@ -1,4 +1,4 @@
-package com.inyta.assciation.common;
+package com.inyta.assciation.common.Realm;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.inyta.assciation.entity.po.User;
@@ -16,10 +16,15 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @Date: 2020/8/10 13:42
  */
 @Slf4j
-public class MyRealm extends AuthorizingRealm {
+public class LoginRealm extends AuthorizingRealm {
 
     @Autowired
     private UserMapper userMapper;
+
+    @Override
+    public boolean supports(AuthenticationToken token) {
+        return token instanceof UsernamePasswordToken;
+    }
 
     /**
      * 授权
@@ -42,6 +47,7 @@ public class MyRealm extends AuthorizingRealm {
         }
         //用户ID作为盐
         ByteSource credentialsSalt = ByteSource.Util.bytes(authenticationToken.getPrincipal());
+        System.out.println(getName());
         //返回数据库取出来的加密密码与经过加密后的登录密码进行对比
         return new SimpleAuthenticationInfo(authenticationToken.getPrincipal(), user.getPassword(), credentialsSalt, getName());
     }

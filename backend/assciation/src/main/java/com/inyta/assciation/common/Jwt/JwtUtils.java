@@ -1,4 +1,4 @@
-package com.inyta.assciation.common;
+package com.inyta.assciation.common.Jwt;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
