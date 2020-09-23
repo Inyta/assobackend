@@ -20,4 +20,8 @@ public class UserInfoDTO {
 
     private Gender gender;
 
+    private Integer userId;
+
+    private String avatarUrl;
+
 }

@@ -1,6 +1,7 @@
 package com.inyta.assciation.controller;
 
 import cn.hutool.core.bean.BeanUtil;
+import com.alibaba.fastjson.JSONObject;
 import com.inyta.assciation.common.Jwt.JwtUtils;
 import com.inyta.assciation.entity.dto.RegisterDTO;
 import com.inyta.assciation.entity.dto.UserLoginDTO;
@@ -33,17 +34,19 @@ public class LoginController {
     @Autowired
     private JwtUtils jwtUtils;
 
-
     @PostMapping("/login")
-    public Result<Void> Login(@RequestBody UserLoginDTO userLoginDTO) {
+    public Result<JSONObject> login(@RequestBody UserLoginDTO userLoginDTO) {
         UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(userLoginDTO.getUserId().toString(), userLoginDTO.getPassword());
         try {
+            usernamePasswordToken.getUsername();
             SecurityUtils.getSubject().login(usernamePasswordToken);
-            String jwt = jwtUtils.generateToken(userLoginDTO.getUserId());
-            return Result.success(jwt);
-        } catch (UnknownAccountException e) {
-            return Result.failed("用户名或密码错误，请重试");
-        } catch (IncorrectCredentialsException e) {
+            User user = (User) SecurityUtils.getSubject().getPrincipal();
+            String jwt = jwtUtils.generateToken(userLoginDTO);
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("token", jwt);
+            jsonObject.put("userName", user.getUserName());
+            return Result.success(jsonObject);
+        } catch (UnknownAccountException | IncorrectCredentialsException e) {
             return Result.failed("用户名或密码错误，请重试");
         }
     }

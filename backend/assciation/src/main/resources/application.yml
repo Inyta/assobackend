@@ -22,4 +22,11 @@ logging:
         assciation:
           mapper: debug
 
-
+association:
+  file:
+    upload:
+      path: /home/static/res/association
+    read:
+      path: /res/association
+  application:
+    host: http://106.14.170.74

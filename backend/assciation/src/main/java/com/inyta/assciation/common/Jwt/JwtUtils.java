@@ -1,5 +1,7 @@
 package com.inyta.assciation.common.Jwt;
 
+import com.inyta.assciation.entity.dto.UserInfoDTO;
+import com.inyta.assciation.entity.dto.UserLoginDTO;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -25,14 +27,15 @@ public class JwtUtils {
     /**
      * 生成jwt token
      */
-    public String generateToken(Long userId) {
+    public String generateToken(UserLoginDTO userLoginDTO) {
         Date nowDate = new Date();
         //过期时间
         Date expireDate = new Date(nowDate.getTime() + EXPIRE * 1000);
 
         return Jwts.builder()
                 .setHeaderParam("typ", "JWT")
-                .setSubject(userId + "")
+                .setSubject(userLoginDTO.getUserId() + "")
+                .setPayload(userLoginDTO.getUserName())
                 .setIssuedAt(nowDate)
                 .setExpiration(expireDate)
                 .signWith(SignatureAlgorithm.HS256, SECRET)
