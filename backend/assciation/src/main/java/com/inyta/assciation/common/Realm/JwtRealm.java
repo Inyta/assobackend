@@ -36,7 +36,6 @@ public class JwtRealm extends AuthorizingRealm {
         JwtToken jwtToken = (JwtToken) token;
         Claims claimByToken = jwtUtils.getClaimByToken(jwtToken.getPrincipal().toString());
         String subject = claimByToken.getSubject();
-        SimpleAuthenticationInfo simpleAuthenticationInfo = new SimpleAuthenticationInfo(subject, jwtToken.getCredentials(), getName());
-        return simpleAuthenticationInfo;
+        return new SimpleAuthenticationInfo(subject, jwtToken.getCredentials(), getName());
     }
 }

@@ -42,8 +42,7 @@ public class ShiroConfig {
      */
     @Bean
     public JwtRealm jwtRealm() {
-        JwtRealm jwtRealm = new JwtRealm();
-        return jwtRealm;
+        return new JwtRealm();
     }
 
     /**

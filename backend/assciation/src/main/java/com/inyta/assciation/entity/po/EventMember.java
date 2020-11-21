@@ -5,14 +5,14 @@ import lombok.Data;
 
 /**
  * @Author: zhangwei
- * @Date: 2020/8/18 13:38
+ * @Date: 2020/11/10 15:02
  */
 @Data
-@TableName("t_association_member")
-public class AssociationMember {
+@TableName("t_event_member")
+public class EventMember {
     private Long id;
 
-    private Integer assoId;
+    private Long userId;
 
-    private Integer userId;
+    private Long eventId;
 }

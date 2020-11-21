@@ -12,7 +12,7 @@ import java.util.Date;
 @Data
 @TableName("t_association")
 public class Association {
-    private Integer id;
+    private Long id;
 
     private String associationName;
 

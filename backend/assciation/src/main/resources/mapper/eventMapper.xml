@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.inyta.assciation.mapper.EventMapper">
+
+    <select id="queryEventByCond" resultType="com.inyta.assciation.entity.po.Event">
+        SELECT t1.*,ta.association_name AS associationName
+        FROM
+             t_event t1
+        LEFT JOIN t_association ta ON t1.association_id = ta.id
+        <where>
+            <if test="eventCond.eventName != null and eventCond.eventName !=''">
+                t1.event_name concat ('%',#{eventCond.eventName},'%')
+            </if>
+            <if test="eventCond.associationId != null and eventCond.associationId !=''">
+                and t1.association_id = #{eventCond.associationId}
+            </if>
+            <if test="eventCond.state != null and eventCond.state !=''">
+                and t1.state = #{eventCond.state}
+            </if>
+            <if test="eventCond.beginTime != null and eventCond.beginTime !=''">
+                and t1.begin_time &gt;= #{eventCond.beginTime}
+            </if>
+            <if test="eventCond.endTime != null and eventCond.endTime !=''">
+                and t1.end_time &lt; #{eventCond.endTime}
+            </if>
+        </where>
+    </select>
+
+    <select id="queryEventInfo" resultType="com.inyta.assciation.entity.po.Event">
+        SELECT t1.*,t2.association_name,( SELECT count(*) FROM t_event_member WHERE event_id = #{eventId} ) AS memberCount
+        FROM
+            t_event t1
+        LEFT JOIN t_association t2 ON t1.association_id = t2.id
+        WHERE
+            t1.id = #{eventId}
+    </select>
+
+</mapper>
