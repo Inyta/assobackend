@@ -1,7 +1,7 @@
 package com.inyta.assciation.config;
 
-import com.inyta.assciation.common.Realm.ChooseRealm;
 import com.inyta.assciation.common.Jwt.JwtFilter;
+import com.inyta.assciation.common.Realm.ChooseRealm;
 import com.inyta.assciation.common.Realm.JwtRealm;
 import com.inyta.assciation.common.Realm.LoginRealm;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;

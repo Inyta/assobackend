@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
  * @Date: 2020/11/10 14:53
  */
 @Service
-public class EventService extends ServiceImpl<EventMapper,Event> {
+public class EventService extends ServiceImpl<EventMapper, Event> {
 
     @Autowired
     private EventMapper eventMapper;

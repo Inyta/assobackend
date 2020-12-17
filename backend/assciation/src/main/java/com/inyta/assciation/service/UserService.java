@@ -11,7 +11,6 @@ import com.inyta.assciation.entity.model.Result;
 import com.inyta.assciation.entity.po.User;
 import com.inyta.assciation.mapper.UserMapper;
 import lombok.extern.slf4j.Slf4j;
-import net.coobird.thumbnailator.Thumbnails;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.crypto.hash.Md5Hash;

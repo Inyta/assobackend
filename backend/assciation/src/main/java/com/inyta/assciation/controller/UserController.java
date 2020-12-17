@@ -68,6 +68,6 @@ public class UserController {
     @PostMapping("/uploadAvatar")
     public Result<String> uploadAvatar(@RequestParam MultipartFile file) throws IOException {
         String fileName = userService.uploadAvatar(file);
-        return Result.success(null,fileName);
+        return Result.success(null, fileName);
     }
 }

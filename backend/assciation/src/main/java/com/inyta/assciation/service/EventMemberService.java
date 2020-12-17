@@ -25,11 +25,22 @@ public class EventMemberService extends ServiceImpl<EventMemberMapper, EventMemb
         if (limit.intValue() == num) {
             return "人数已满";
         } else {
-            EventMember eventMember = new EventMember();
-            eventMember.setUserId(Long.valueOf(SecurityUtils.getSubject().getPrincipal().toString()));
-            eventMember.setEventId(eventId);
-            this.save(eventMember);
-            return "报名成功";
+            try {
+                EventMember eventMember = new EventMember();
+                eventMember.setUserId(Long.valueOf(SecurityUtils.getSubject().getPrincipal().toString()));
+                eventMember.setEventId(eventId);
+                this.save(eventMember);
+                return "报名成功";
+            } catch (Exception e) {
+                return "报名失败，请检查报名情况";
+            }
         }
+    }
+
+    public int cancelJoinEvent(Long eventId) {
+        String userId = SecurityUtils.getSubject().getPrincipal().toString();
+        QueryWrapper<EventMember> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("event_id", eventId).eq("user_id", userId);
+        return eventMemberMapper.delete(queryWrapper);
     }
 }

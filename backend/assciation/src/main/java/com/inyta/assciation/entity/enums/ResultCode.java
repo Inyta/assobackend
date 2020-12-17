@@ -4,7 +4,7 @@ package com.inyta.assciation.entity.enums;
  * @Author: zhangwei
  * @Date: 2020/8/11 9:05
  */
-public enum  ResultCode {
+public enum ResultCode {
 
     SUCCESS(0), FAILED(-1);
 

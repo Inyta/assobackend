@@ -1,7 +1,10 @@
 package com.inyta.assciation.entity.dto;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
@@ -22,7 +25,7 @@ public class PageDTO<T> {
 
     private Long num;
 
-    public PageDTO(IPage<T> page){
+    public PageDTO(IPage<T> page) {
         this.data = page.getRecords();
         this.total = page.getTotal();
         this.num = page.getCurrent();

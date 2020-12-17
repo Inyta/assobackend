@@ -1,8 +1,8 @@
 package com.inyta.assciation.entity.po;
 
-import com.alibaba.fastjson.annotation.JSONField;
 import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
+
 import java.util.Date;
 
 /**
@@ -34,5 +34,7 @@ public class Event {
 
     @TableField(exist = false)
     private int memberCount;
+    @TableField(exist = false)
+    private boolean isJoin;
 
 }

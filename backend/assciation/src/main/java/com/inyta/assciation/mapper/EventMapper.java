@@ -2,7 +2,6 @@ package com.inyta.assciation.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.inyta.assciation.entity.dto.EventCond;
 import com.inyta.assciation.entity.po.Event;
 import org.apache.ibatis.annotations.Param;
@@ -13,7 +12,7 @@ import org.apache.ibatis.annotations.Param;
  */
 public interface EventMapper extends BaseMapper<Event> {
 
-    IPage<Event> queryEventByCond(IPage<Event> page,@Param("eventCond") EventCond eventCond);
+    IPage<Event> queryEventByCond(IPage<Event> page, @Param("eventCond") EventCond eventCond);
 
-    Event queryEventInfo(@Param("eventId")Long eventId);
+    Event queryEventInfo(@Param("eventId") Long eventId, @Param("userId") String userId);
 }

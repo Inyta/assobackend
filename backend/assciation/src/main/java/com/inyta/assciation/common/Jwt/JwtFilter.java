@@ -3,7 +3,6 @@ package com.inyta.assciation.common.Jwt;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import io.jsonwebtoken.Claims;
 import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.web.filter.authc.BasicHttpAuthenticationFilter;
 import org.apache.shiro.web.util.WebUtils;
 import org.springframework.stereotype.Component;
@@ -59,6 +58,7 @@ public class JwtFilter extends BasicHttpAuthenticationFilter {
             return true;
         }
     }
+
     /**
      * 对跨域提供支持
      */

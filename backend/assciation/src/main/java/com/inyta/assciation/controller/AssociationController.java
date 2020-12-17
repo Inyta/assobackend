@@ -21,6 +21,7 @@ public class AssociationController {
 
     /**
      * 查询社团
+     *
      * @return
      */
     @GetMapping("/queryAssociations")

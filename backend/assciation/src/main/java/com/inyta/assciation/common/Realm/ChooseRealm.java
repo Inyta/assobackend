@@ -15,7 +15,7 @@ import java.util.Collection;
 public class ChooseRealm extends ModularRealmAuthenticator {
     @Override
     protected AuthenticationInfo doMultiRealmAuthentication(Collection<Realm> realms, AuthenticationToken token) {
-    // 判断getRealms()是否返回为空
+        // 判断getRealms()是否返回为空
         assertRealmsConfigured();
         // 通过supports()方法，匹配对应的Realm
         Realm uniqueRealm = null;
