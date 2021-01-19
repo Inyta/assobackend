@@ -10,9 +10,10 @@ import lombok.Data;
 @Data
 @TableName("t_event_member")
 public class EventMember {
-    private Long id;
 
-    private Long userId;
+  private Long id;
 
-    private Long eventId;
+  private Long userId;
+
+  private Long eventId;
 }

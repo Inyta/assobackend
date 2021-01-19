@@ -6,16 +6,16 @@ package com.inyta.assciation.entity.enums;
  */
 public enum ResultCode {
 
-    SUCCESS(0), FAILED(-1);
+  SUCCESS(0), FAILED(-1);
 
-    private final Integer code;
+  private final Integer code;
 
-    ResultCode(int code) {
-        this.code = code;
-    }
+  ResultCode(int code) {
+    this.code = code;
+  }
 
-    public int getCode() {
-        return code;
-    }
+  public int getCode() {
+    return code;
+  }
 
 }

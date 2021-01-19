@@ -14,14 +14,14 @@ import lombok.ToString;
 @ToString
 public class UserInfoDTO {
 
-    private String userName;
+  private String userName;
 
-    private String phone;
+  private String phone;
 
-    private Gender gender;
+  private Gender gender;
 
-    private Integer userId;
+  private Integer userId;
 
-    private String avatarUrl;
+  private String avatarUrl;
 
 }

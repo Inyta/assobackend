@@ -14,39 +14,39 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Result<T> {
 
-    private Integer code;
+  private Integer code;
 
-    private String msg;
+  private String msg;
 
-    private T result;
+  private T result;
 
-    public static <T> Result<T> success() {
-        return successWith(ResultCode.SUCCESS.getCode(), null, null);
-    }
+  public static <T> Result<T> success() {
+    return successWith(ResultCode.SUCCESS.getCode(), null, null);
+  }
 
-    public static <T> Result<T> success(String msg) {
-        return successWith(ResultCode.SUCCESS.getCode(), msg, null);
-    }
+  public static <T> Result<T> success(String msg) {
+    return successWith(ResultCode.SUCCESS.getCode(), msg, null);
+  }
 
-    public static <T> Result<T> success(T data) {
-        return successWith(ResultCode.SUCCESS.getCode(), null, data);
-    }
+  public static <T> Result<T> success(T data) {
+    return successWith(ResultCode.SUCCESS.getCode(), null, data);
+  }
 
-    public static <T> Result<T> success(String msg, T data) {
-        return successWith(ResultCode.SUCCESS.getCode(), msg, data);
-    }
+  public static <T> Result<T> success(String msg, T data) {
+    return successWith(ResultCode.SUCCESS.getCode(), msg, data);
+  }
 
-    public static <T> Result<T> successWith(Integer code, String msg, T data) {
-        return new Result<>(code, msg, data);
-    }
+  public static <T> Result<T> successWith(Integer code, String msg, T data) {
+    return new Result<>(code, msg, data);
+  }
 
-    public static <T> Result<T> failed(String msg) {
-        return failedWith(ResultCode.FAILED.getCode(), msg, null);
-    }
+  public static <T> Result<T> failed(String msg) {
+    return failedWith(ResultCode.FAILED.getCode(), msg, null);
+  }
 
-    public static <T> Result<T> failedWith(Integer code, String msg, T data) {
-        return new Result<>(code, msg, data);
-    }
+  public static <T> Result<T> failedWith(Integer code, String msg, T data) {
+    return new Result<>(code, msg, data);
+  }
 
 }
 

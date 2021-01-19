@@ -8,9 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @MapperScan("com.inyta.assciation.mapper")
 public class AssciationApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(AssciationApplication.class, args);
-    }
+  public static void main(String[] args) {
+    SpringApplication.run(AssciationApplication.class, args);
+  }
 
 }
 

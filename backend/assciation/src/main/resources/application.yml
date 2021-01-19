@@ -15,18 +15,18 @@ mybatis-plus:
   mapper-locations: classpath:/mapper/*.xml
   configuration:
     default-enum-type-handler: com.baomidou.mybatisplus.extension.handlers.MybatisEnumTypeHandler
+  global-config:
+    db-config:
+      id-type: auto
 logging:
   level:
     com:
       inyta:
         assciation:
           mapper: debug
-
-association:
-  file:
-    upload:
-      path: /home/static/res/association
-    read:
-      path: /res/association
-  application:
-    host: http://106.14.170.74
+file:
+  upload:
+    path: /home/static/res/association
+  read:
+    path: /res/association
+  host: http://106.14.170.74

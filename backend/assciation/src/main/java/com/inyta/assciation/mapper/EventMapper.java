@@ -12,7 +12,7 @@ import org.apache.ibatis.annotations.Param;
  */
 public interface EventMapper extends BaseMapper<Event> {
 
-    IPage<Event> queryEventByCond(IPage<Event> page, @Param("eventCond") EventCond eventCond);
+  IPage<Event> queryEventByCond(IPage<Event> page, @Param("eventCond") EventCond eventCond);
 
-    Event queryEventInfo(@Param("eventId") Long eventId, @Param("userId") String userId);
+  Event queryEventInfo(@Param("eventId") Long eventId, @Param("userId") String userId);
 }

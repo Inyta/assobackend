@@ -13,11 +13,12 @@ import lombok.ToString;
 @Setter
 @ToString
 public class RegisterDTO {
-    private Long userId;
 
-    private String userName;
+  private Long userId;
 
-    private String password;
+  private String userName;
 
-    private Gender gender;
+  private String password;
+
+  private Gender gender;
 }

@@ -18,24 +18,25 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 public class JwtRealm extends AuthorizingRealm {
 
-    @Autowired
-    private JwtUtils jwtUtils;
+  @Autowired
+  private JwtUtils jwtUtils;
 
-    @Override
-    public boolean supports(AuthenticationToken token) {
-        return token instanceof JwtToken;
-    }
+  @Override
+  public boolean supports(AuthenticationToken token) {
+    return token instanceof JwtToken;
+  }
 
-    @Override
-    protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
-        return null;
-    }
+  @Override
+  protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
+    return null;
+  }
 
-    @Override
-    protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
-        JwtToken jwtToken = (JwtToken) token;
-        Claims claimByToken = jwtUtils.getClaimByToken(jwtToken.getPrincipal().toString());
-        String subject = claimByToken.getSubject();
-        return new SimpleAuthenticationInfo(subject, jwtToken.getCredentials(), getName());
-    }
+  @Override
+  protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token)
+      throws AuthenticationException {
+    JwtToken jwtToken = (JwtToken) token;
+    Claims claimByToken = jwtUtils.getClaimByToken(jwtToken.getPrincipal().toString());
+    String subject = claimByToken.getSubject();
+    return new SimpleAuthenticationInfo(subject, jwtToken.getCredentials(), getName());
+  }
 }

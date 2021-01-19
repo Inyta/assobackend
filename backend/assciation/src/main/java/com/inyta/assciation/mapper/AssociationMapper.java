@@ -8,4 +8,5 @@ import com.inyta.assciation.entity.po.Association;
  * @Date: 2020/8/18 13:40
  */
 public interface AssociationMapper extends BaseMapper<Association> {
+
 }

@@ -1,40 +1,45 @@
 package com.inyta.assciation.entity.po;
 
 import com.baomidou.mybatisplus.annotation.TableField;
-import lombok.Data;
-
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import java.util.Date;
+import lombok.Data;
 
 /**
  * @Author: zhangwei
  * @Date: 2020/10/31 15:26
  */
 @Data
+@TableName("t_event")
 public class Event {
-    private Long id;
 
-    private String eventName;
+  @TableId
+  private Long id;
 
-    private String eventPic;
+  private String eventName;
 
-    private String eventAddress;
+  private String eventPic;
 
-    private Long associationId;
+  private String eventAddress;
 
-    @TableField(exist = false)
-    private String associationName;
+  private Long associationId;
 
-    private Integer limit;
+  @TableField(exist = false)
+  private String associationName;
 
-    private Date applyTime;
+  private Integer limit;
 
-    private Date beginTime;
+  private Date applyTime;
 
-    private Date endTime;
+  private Date beginTime;
 
-    @TableField(exist = false)
-    private int memberCount;
-    @TableField(exist = false)
-    private boolean isJoin;
+  private Date endTime;
+
+  @TableField(exist = false)
+  private int memberCount;
+
+  @TableField(exist = false)
+  private boolean isJoin;
 
 }

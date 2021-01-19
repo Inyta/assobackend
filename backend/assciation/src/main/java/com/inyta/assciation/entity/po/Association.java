@@ -1,9 +1,8 @@
 package com.inyta.assciation.entity.po;
 
 import com.baomidou.mybatisplus.annotation.TableName;
-import lombok.Data;
-
 import java.util.Date;
+import lombok.Data;
 
 /**
  * @Author: zhangwei
@@ -12,19 +11,20 @@ import java.util.Date;
 @Data
 @TableName("t_association")
 public class Association {
-    private Long id;
 
-    private String associationName;
+  private Long id;
 
-    private Integer leaderId;
+  private String associationName;
 
-    private String picUrl;
+  private Integer leaderId;
 
-    private Integer status;
+  private String picUrl;
 
-    private String desrc;
+  private Integer status;
 
-    private Date createTime;
+  private String desrc;
 
-    private Date updateTime;
+  private Date createTime;
+
+  private Date updateTime;
 }

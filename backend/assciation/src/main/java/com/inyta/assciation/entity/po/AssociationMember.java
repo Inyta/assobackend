@@ -10,9 +10,10 @@ import lombok.Data;
 @Data
 @TableName("t_association_member")
 public class AssociationMember {
-    private Long id;
 
-    private Integer assoId;
+  private Long id;
 
-    private Integer userId;
+  private Integer assoId;
+
+  private Integer userId;
 }

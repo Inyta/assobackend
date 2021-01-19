@@ -1,12 +1,11 @@
 package com.inyta.assciation.entity.dto;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.List;
 
 /**
  * @Author: zhangwei
@@ -17,18 +16,19 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class PageDTO<T> {
-    private List<T> data;
 
-    private Long total;
+  private List<T> data;
 
-    private Long size;
+  private Long total;
 
-    private Long num;
+  private Long size;
 
-    public PageDTO(IPage<T> page) {
-        this.data = page.getRecords();
-        this.total = page.getTotal();
-        this.num = page.getCurrent();
-        this.size = page.getSize();
-    }
+  private Long num;
+
+  public PageDTO(IPage<T> page) {
+    this.data = page.getRecords();
+    this.total = page.getTotal();
+    this.num = page.getCurrent();
+    this.size = page.getSize();
+  }
 }

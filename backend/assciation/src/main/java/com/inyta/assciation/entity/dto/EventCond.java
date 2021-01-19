@@ -1,9 +1,8 @@
 package com.inyta.assciation.entity.dto;
 
+import java.util.Date;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.util.Date;
 
 /**
  * @Author: zhangwei
@@ -13,18 +12,18 @@ import java.util.Date;
 @Setter
 public class EventCond {
 
-    private String eventName;
+  private String eventName;
 
-    private Long associationId;
+  private Long associationId;
 
-    private Date beginTime;
+  private Date beginTime;
 
-    private Date endTime;
+  private Date endTime;
 
-    private Integer state;
+  private Integer state;
 
-    private Integer pageNum;
+  private Integer pageNum;
 
-    private Integer pageSize;
+  private Integer pageSize;
 
 }

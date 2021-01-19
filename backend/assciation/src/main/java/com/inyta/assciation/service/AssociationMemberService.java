@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
  * @Date: 2020/8/18 13:39
  */
 @Service
-public class AssociationMemberService extends ServiceImpl<AssociationMemberMapper, AssociationMember> {
+public class AssociationMemberService extends
+    ServiceImpl<AssociationMemberMapper, AssociationMember> {
 
 }

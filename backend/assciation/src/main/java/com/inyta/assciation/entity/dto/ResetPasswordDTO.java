@@ -13,7 +13,7 @@ import lombok.ToString;
 @ToString
 public class ResetPasswordDTO {
 
-    private String exPassword;
+  private String exPassword;
 
-    private String password;
+  private String password;
 }

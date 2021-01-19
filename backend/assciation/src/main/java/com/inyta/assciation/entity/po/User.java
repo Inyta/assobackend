@@ -4,9 +4,8 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.inyta.assciation.entity.enums.Gender;
-import lombok.Data;
-
 import java.util.Date;
+import lombok.Data;
 
 /**
  * @Author: zhangwei
@@ -15,24 +14,25 @@ import java.util.Date;
 @Data
 @TableName("t_user")
 public class User {
-    @TableId
-    private Long userId;
 
-    private String userName;
+  @TableId
+  private Long userId;
 
-    private String password;
+  private String userName;
 
-    private String avatarUrl;
+  private String password;
 
-    private String phone;
+  private String avatarUrl;
 
-    private Gender gender;
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private Date createTime;
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private Date updateTime;
+  private String phone;
 
-    private Integer role;
+  private Gender gender;
+  @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+  private Date createTime;
+  @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+  private Date updateTime;
 
-    private Integer status;
+  private Integer role;
+
+  private Integer status;
 }
